@@ -1,0 +1,170 @@
+$cont-width: 1110px;
+$blue: #5551F7;
+
+
+@mixin blue-btn {
+    width: 171px;
+    height: 41px;
+    background: $blue;
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+@mixin white-btn {
+    width: 171px;
+    height: 41px;
+    color: $blue;
+    background-color: white;
+    text-align: center;
+    border: 1px solid $blue;
+}
+
+.header{
+    margin: 0 auto;
+    max-width: $cont-width;
+    display: flex;
+    justify-content: center;
+    gap: 197px;
+
+    &__logo-nav{
+        display: flex;
+        gap: 95px;
+
+        &-nav{
+            display: flex;
+            gap: 45px;
+            align-items: center;
+        }
+    }
+
+    &__number-button{
+        display: flex;
+        gap: 45px;
+        align-items: center;
+
+        &-button{
+           @include blue-btn()
+        }
+    }
+    
+}
+
+.main{
+    max-width: $cont-width;
+    margin: 0 auto;
+}
+
+.section-1{
+    display: flex;
+    align-items: center;
+    gap: 97px;
+    &__text{
+        &-h2{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        &-p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 56px;
+
+        }
+        &-buttons{
+            display: flex;
+            gap: 20px;
+            &-btn_blue{
+                @include blue-btn()
+            }
+            &-btn_white{
+                @include white-btn()
+            }
+        }
+    }
+
+
+}
+
+.section-2{
+    &__h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &__items{
+        display: flex;
+        gap: 45px;
+        height: 262px;
+        justify-content: center;
+
+        &-item:nth-child(even){
+            align-self: flex-end;
+        }
+
+        &-item:nth-child(odd){
+            align-self: flex-start;
+        }
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+            background-image: url("../images/Ellipse 26.png");
+            
+            &-number{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 70px;
+                font-weight: 900;
+                color: $blue;
+
+            }
+
+            &-text{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+
+            }
+        }
+    }
+
+    &__scroll{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        &-line{
+            height: 1px;
+            width: 980px;
+            border-bottom:1px solid #E4E4E4;
+            ;
+        }
+        &-img_reverce{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.section-3{
+    margin: 0 auto;
+    &__h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    &__blocks{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__btn_blue{
+        margin-top: 80px;
+        
+        @include blue-btn()
+    }
+}
+
